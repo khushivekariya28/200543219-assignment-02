@@ -1,0 +1,129 @@
+body {
+    max-width: 1200px ;
+    margin: 20px auto;
+    padding: 20px;
+    outline: 1px snow;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    text-align: left;
+}
+
+a {
+    color: #007bff;
+}
+
+a:hover  {
+    color: darkblue;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: "header header" "aside main" "footer footer";
+    gap: 1em;
+    justify-content: center;
+}
+
+
+.row {
+    margin-top: 1em;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    column-gap: 400px;
+
+}
+
+.text {
+    margin: 15px 0;
+}
+
+.column {
+    margin-top: 1em;
+    display: grid;
+    padding-right: 10px;
+    float: left;
+}
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+   
+}
+
+
+
+header > nav {
+    width: 100%;
+    background-color: #b3dafe;
+    display: flex;
+    justify-content: center;
+}
+
+header > nav > ul {
+    display: flex;
+    margin: 20 10px;
+}
+
+header > nav > ul > li > a {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 60%;
+ height: 40px;
+ padding: 10px;
+}
+
+header > nav > ul > li > a:hover {
+    background-color: #8cc7ff;
+}
+
+
+
+main {
+    width: 70%;
+    order: 2;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-areas: ".row main .row";
+}
+
+
+
+aside {
+    width: 30%;
+    order: 1;
+    align-content: center;
+        
+}
+
+
+aside > nav > ul > li {
+    margin-bottom: 50px;
+}
+footer {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
